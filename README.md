@@ -15,7 +15,7 @@ This template repository provides an easy way to start working on a new [Inkdrop
 
 # Auto Reload
 
-[![Build Status](https://dev.azure.com/jmerle/inkdrop-hello-world/_apis/build/status/Build?branchName=master)](https://dev.azure.com/jmerle/inkdrop-hello-world/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://dev.azure.com/jmerle/inkdrop-auto-reload/_apis/build/status/Build?branchName=master)](https://dev.azure.com/jmerle/inkdrop-auto-reload/_build/latest?definitionId=13&branchName=master)
 [![License](https://img.shields.io/github/license/jmerle/inkdrop-auto-reload)](https://github.com/jmerle/inkdrop-auto-reload/blob/master/LICENSE)
 
 Automatically reload Inkdrop when a plugin is added/deleted/modified.
