@@ -17,8 +17,7 @@
     "release": "rimraf dist/ && yarn build && ipm publish"
   },
   "dependencies": {
-    "chokidar": "^3.3.1",
-    "lodash.debounce": "^4.0.8"
+    "chokidar": "^3.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -94,7 +93,6 @@
     ]
   },
   "prettier": {
-    "printWidth": 120,
     "singleQuote": true,
     "trailingComma": "all"
   }
