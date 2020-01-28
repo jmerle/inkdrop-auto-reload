@@ -1,8 +1,8 @@
 {
-  "name": "hello-world",
+  "name": "auto-reload",
   "version": "0.0.0",
-  "description": "Hello World plugin description",
-  "repository": "https://github.com/jmerle/inkdrop-hello-world",
+  "description": "Automatically reload Inkdrop when a plugin is added/deleted/modified",
+  "repository": "https://github.com/jmerle/inkdrop-auto-reload",
   "license": "MIT",
   "main": "./dist/index",
   "scripts": {
