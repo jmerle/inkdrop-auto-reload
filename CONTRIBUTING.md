@@ -20,8 +20,8 @@ After installing all dependencies, it's time to get to work. The following comma
 
 To install the plugin locally for development, run `ipm link --dev`. Make sure "Development Mode" is turned on inside Inkdrop (Preferences > General). You'll need to reload Inkdrop (Developer > Reload) every time you rebuild the extension through `yarn build` or after changing a source file while `yarn dev` is running. When the plugin is linked using `ipm link --dev` the reload should be triggered automatically, but in case something is broken you'll have to do this manually.
 
-## Maintainers
+## Maintainer Tasks
 
-Some tasks only have to be performed by maintainers:
+Some tasks only have to be performed by the maintainer:
 - To update dependencies, run `yarn upgrade-interactive --latest` and select the dependencies to update.
 - To release a new version, run `yarn release`. This removes the dist/ directory, builds the code and runs `ipm publish` with the arguments and options provided to `yarn release`. Run `ipm help publish` to see all the supported arguments and options. After releasing the new version, go to the repository's releases on GitHub, create a new release, link it to the newly created tag and write some information about the update.
