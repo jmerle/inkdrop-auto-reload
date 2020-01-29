@@ -26,4 +26,4 @@ See the [GitHub releases](https://github.com/jmerle/inkdrop-auto-reload/releases
 
 ## Contributing
 
-All contributions are welcome. Please read [CONTRIBUTING.md](https://github.com/jmerle/inkdrop-auto-reload/blob/master/CONTRIBUTING.md) first as it contains information regarding the tools used by the project and instructions on how to set up a development environment.
+All contributions are welcome. Please read the [Contributing Guide](https://github.com/jmerle/inkdrop-auto-reload/blob/master/CONTRIBUTING.md) first as it contains information regarding the tools used by the project and instructions on how to set up a development environment.
