@@ -23,8 +23,16 @@ function doReload() {
   inkdrop.commands.dispatch(document.body, 'core:save-note');
 }
 
-function reload() {
+function reload(path) {
   if (reloadCalled) {
+    return;
+  }
+
+  const packageName = /packages\/([^/\\]+)/.exec(path)[1];
+  const disabled = inkdrop.packages.isPackageDisabled(packageName);
+  const reloadDisabled = inkdrop.config.get('auto-reload.reloadDisabled');
+
+  if (disabled && !reloadDisabled) {
     return;
   }
 
@@ -43,7 +51,12 @@ function reload() {
 
 const config = {
   reloadImmediately: {
-    title: 'Reload immediately when a change is detected',
+    title: 'Reload immediately when a change has been detected',
+    type: 'boolean',
+    default: false,
+  },
+  reloadDisabled: {
+    title: 'Reload when a change in a disabled plugin has been detected',
     type: 'boolean',
     default: false,
   },
@@ -56,9 +69,9 @@ function activate() {
     ignored: path => path.includes('.git/') || path.includes('node_modules/'),
   });
   watcher
-    .on('add', () => reload())
-    .on('change', () => reload())
-    .on('unlink', () => reload());
+    .on('add', path => reload(path))
+    .on('change', path => reload(path))
+    .on('unlink', path => reload(path));
 }
 
 function deactivate() {
