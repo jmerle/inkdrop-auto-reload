@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest! Contributions are very welcome.
+Thank you for your interest! Contributions are very welcome.
 
 ## Getting Started
 
