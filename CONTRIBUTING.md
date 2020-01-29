@@ -24,4 +24,4 @@ To install the plugin locally for development, run `ipm link --dev`. Make sure "
 
 Some tasks only have to be performed by maintainers:
 - To update dependencies, run `yarn upgrade-interactive --latest` and select the dependencies to update.
-- To release a new version, run `yarn release`. This cleans the dist/ directory, builds the code and runs `ipm publish` with the arguments and options provided to `yarn release`. Run `ipm help publish` to see all the supported arguments and options. After releasing the new version, go to the repository's releases on GitHub, create a new release, link it to the newly created tag and write some information about the update.
+- To release a new version, run `yarn release`. This removes the dist/ directory, builds the code and runs `ipm publish` with the arguments and options provided to `yarn release`. Run `ipm help publish` to see all the supported arguments and options. After releasing the new version, go to the repository's releases on GitHub, create a new release, link it to the newly created tag and write some information about the update.
