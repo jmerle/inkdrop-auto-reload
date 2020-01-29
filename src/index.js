@@ -41,6 +41,8 @@ function reload(path) {
 export const config = {
   reloadImmediately: {
     title: 'Reload immediately when a change has been detected',
+    description:
+      'When disabled reloading is postponed until Inkdrop is given focus. Reloading causes Inkdrop to steal focus from other applications, which can be quite annoying.',
     type: 'boolean',
     default: false,
   },
