@@ -14,7 +14,7 @@ ipm install auto-reload
 
 ## Usage
 
-Simply install the plugin to make it work. By default, reloading is postponed until the Inkdrop window is given focus. This is because reloading causes the Inkdrop window to steal focus from other applications, which can be quite annoying. This behavior can be changed in the plugin's settings.
+Simply install the plugin to make it work. By default reloading is postponed until the Inkdrop window is given focus. This is because reloading causes the Inkdrop window to steal focus from other applications, which can be quite annoying. This behavior can be changed in the plugin's settings.
 
 ## Changelog
 

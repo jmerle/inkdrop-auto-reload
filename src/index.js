@@ -41,6 +41,7 @@ export const config = {
 export function activate() {
   watcher = chokidar.watch(inkdrop.packages.getPackageDirPaths(), {
     ignoreInitial: true,
+    ignored: path => path.includes('.git/') || path.includes('node_modules/'),
   });
 
   watcher

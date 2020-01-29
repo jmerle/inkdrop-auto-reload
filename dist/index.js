@@ -53,6 +53,7 @@ exports.config = config;
 function activate() {
   watcher = _chokidar.default.watch(inkdrop.packages.getPackageDirPaths(), {
     ignoreInitial: true,
+    ignored: path => path.includes('.git/') || path.includes('node_modules/'),
   });
   watcher
     .on('add', () => reload())
