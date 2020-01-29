@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) {
 }
 
 let watcher = null;
-let reloadCalled = false;
+let reloadQueued = false;
 
 function doReload() {
   inkdrop.commands.add(document.body, {
@@ -24,7 +24,7 @@ function doReload() {
 }
 
 function reload(path) {
-  if (reloadCalled) {
+  if (reloadQueued) {
     return;
   }
 
@@ -36,7 +36,7 @@ function reload(path) {
     return;
   }
 
-  reloadCalled = true;
+  reloadQueued = true;
   const reloadImmediately = inkdrop.config.get('auto-reload.reloadImmediately');
   const focused = inkdrop.window.isFocused();
 
