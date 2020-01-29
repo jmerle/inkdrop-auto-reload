@@ -1,6 +1,6 @@
 {
   "name": "auto-reload",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automatically reload Inkdrop when a plugin is added/deleted/modified",
   "repository": "https://github.com/jmerle/inkdrop-auto-reload",
   "license": "MIT",
