@@ -12,11 +12,15 @@ var _chokidar = _interopRequireDefault(require("chokidar"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 let watcher = null;
+let commandListener = null;
 let reloadQueued = false;
 
 function doReload() {
-  inkdrop.commands.add(document.body, {
-    'core:save-note': () => inkdrop.window.reload()
+  commandListener = inkdrop.commands.add(document.body, {
+    'core:save-note': () => {
+      inkdrop.packages.reset();
+      inkdrop.window.reload();
+    }
   });
   inkdrop.commands.dispatch(document.body, 'core:save-note');
 }
@@ -74,6 +78,11 @@ function deactivate() {
   if (watcher !== null) {
     watcher.close();
     watcher = null;
+  }
+
+  if (commandListener !== null) {
+    commandListener.dispose();
+    commandListener = null;
   }
 }
 //# sourceMappingURL=index.js.map
