@@ -18,7 +18,9 @@ Simply install the plugin to make it work. There are two settings available:
 - Reload immediately when a change has been detected
     - By default reloading is postponed until the Inkdrop window is given focus. This is because reloading causes Inkdrop to steal focus from other applications, which can be quite annoying.
 - Reload when a change in a disabled plugin has been detected
-    - By default changes in disabled plugin don't trigger a reload.
+    - By default changes in disabled plugins don't trigger a reload.
+
+If there is a note with unsaved changes open when a reload needs to happen, the note is saved before triggering the reload.
 
 ## Changelog
 
