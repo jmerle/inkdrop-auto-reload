@@ -30,7 +30,7 @@ function reload(path) {
     return;
   }
 
-  const packageName = /packages\/([^/\\]+)/.exec(path)[1];
+  const packageName = /packages(?:\/|\\)([^/\\]+)/.exec(path)[1];
   const disabled = inkdrop.packages.isPackageDisabled(packageName);
   const reloadDisabled = inkdrop.config.get('auto-reload.reloadDisabled');
 
