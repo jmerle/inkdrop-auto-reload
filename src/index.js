@@ -1,3 +1,5 @@
+'use babel';
+
 import chokidar from 'chokidar';
 
 let watcher = null;
