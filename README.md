@@ -1,6 +1,6 @@
 # Auto Reload plugin for Inkdrop
 
-[![Build Status](https://dev.azure.com/jmerle/inkdrop-auto-reload/_apis/build/status/Build?branchName=master)](https://dev.azure.com/jmerle/inkdrop-auto-reload/_build/latest?definitionId=13&branchName=master)
+[![Build Status](https://github.com/jmerle/inkdrop-auto-reload/workflows/Build/badge.svg)](https://github.com/jmerle/inkdrop-auto-reload/actions?query=workflow%3ABuild)
 [![Latest release](https://img.shields.io/github/v/release/jmerle/inkdrop-auto-reload)](https://my.inkdrop.app/plugins/auto-reload)
 [![License](https://img.shields.io/github/license/jmerle/inkdrop-auto-reload)](https://github.com/jmerle/inkdrop-auto-reload/blob/master/LICENSE)
 
