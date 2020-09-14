@@ -1,7 +1,8 @@
 # Auto Reload plugin for Inkdrop
 
 [![Build Status](https://github.com/jmerle/inkdrop-auto-reload/workflows/Build/badge.svg)](https://github.com/jmerle/inkdrop-auto-reload/actions?query=workflow%3ABuild)
-[![Latest release](https://img.shields.io/github/v/release/jmerle/inkdrop-auto-reload)](https://my.inkdrop.app/plugins/auto-reload)
+[![Latest release](https://inkdrop-plugin-badge.vercel.app/api/version/auto-reload?style=flat)](https://my.inkdrop.app/plugins/auto-reload)
+[![Downloads](https://inkdrop-plugin-badge.vercel.app/api/downloads/auto-reload?style=flat)](https://my.inkdrop.app/plugins/auto-reload)
 [![License](https://img.shields.io/github/license/jmerle/inkdrop-auto-reload)](https://github.com/jmerle/inkdrop-auto-reload/blob/master/LICENSE)
 
 Automatically reload Inkdrop when a plugin is added/deleted/modified.
