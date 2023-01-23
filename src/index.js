@@ -3,19 +3,10 @@
 import chokidar from 'chokidar';
 
 let watcher = null;
-let commandListener = null;
-
 let reloadQueued = false;
 
 function doReload() {
-  commandListener = inkdrop.commands.add(document.body, {
-    'core:save-note': () => {
-      inkdrop.packages.reset();
-      inkdrop.window.reload();
-    },
-  });
-
-  inkdrop.commands.dispatch(document.body, 'core:save-note');
+  inkdrop.commands.dispatch(document.body, 'window:reload');
 }
 
 function reload(path) {
@@ -76,10 +67,5 @@ export function deactivate() {
   if (watcher !== null) {
     watcher.close();
     watcher = null;
-  }
-
-  if (commandListener !== null) {
-    commandListener.dispose();
-    commandListener = null;
   }
 }
