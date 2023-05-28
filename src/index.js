@@ -5,6 +5,17 @@ import chokidar from 'chokidar';
 let watcher = null;
 let reloadQueued = false;
 
+function closeWatcher() {
+  if (watcher !== null) {
+    watcher.close();
+    watcher = null;
+  }
+}
+
+const beforeunloadEventHandler = () => {
+  closeWatcher();
+};
+
 function doReload() {
   inkdrop.commands.dispatch(document.body, 'window:reload');
 }
@@ -61,11 +72,12 @@ export function activate() {
     .on('add', path => reload(path))
     .on('change', path => reload(path))
     .on('unlink', path => reload(path));
+
+  window.addEventListener('beforeunload', beforeunloadEventHandler);
 }
 
 export function deactivate() {
-  if (watcher !== null) {
-    watcher.close();
-    watcher = null;
-  }
+  closeWatcher();
+
+  window.removeEventListener('beforeunload', beforeunloadEventHandler);
 }
